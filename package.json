@@ -1,0 +1,7 @@
+{
+	"name": "ini-parser",
+	"version": "0.0.1",
+	"description": "A better .ini files parser",
+	"keywords": ["ini", "linux", "configration", "parser", "files"],
+	"main": "index.js"
+}
