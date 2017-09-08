@@ -1,3 +1,4 @@
+const fs = require("fs");
 var REG_GROUP = /^\s*\[(.+?)\]\s*$/
 var REG_PROP = /^\s*([^#].*?)\s*=\s*(.*?)\s*$/
 
