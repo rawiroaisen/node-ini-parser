@@ -1,9 +1,10 @@
+const fs = require("fs");
 var REG_GROUP = /^\s*\[(.+?)\]\s*$/
 var REG_PROP = /^\s*([^#].*?)\s*=\s*(.*?)\s*$/
 
 function parse(string){
 	var object = {}
-	var lines = string.split('\n')
+	var lines = string.split(/(\r\n|\n)/g)
 	var group
 	var match
 
