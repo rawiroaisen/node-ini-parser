@@ -1,5 +1,6 @@
 var REG_GROUP = /^\s*\[(.+?)\]\s*$/
 var REG_PROP = /^\s*([^#].*?)\s*=\s*(.*?)\s*$/
+var fs = require('fs')
 
 function parse(string){
 	var object = {}
