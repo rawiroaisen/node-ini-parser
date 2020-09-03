@@ -8,10 +8,17 @@ function parse(string){
 	var match
 
 	for(var i = 0, len = lines.length; i !== len; i++){
-		if(match = lines[i].match(REG_GROUP))
+		if(match = lines[i].match(REG_GROUP)){
+			if (match[1] === '__proto__' || match[1] === 'constructor' || match[1] === 'prototype') {
+            	return object;
+        	}
 			object[match[1]] = group = object[match[1]] || {};
-		else if(group && (match = lines[i].match(REG_PROP)))
+		}else if(group && (match = lines[i].match(REG_PROP))){
+			if (match[1] === '__proto__' || match[1] === 'constructor' || match[1] === 'prototype') {
+            	return object;
+        	}
 			group[match[1]] = match[2];
+		}
 	}
 
 	return object;
